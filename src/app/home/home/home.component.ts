@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EquipmentDataService } from 'src/app/core/services/equipment-data.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
+  equipments$ = this.eventService.getData();
+  constructor(private eventService: EquipmentDataService) { }
 }

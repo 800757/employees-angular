@@ -1,0 +1,21 @@
+.content{
+    width: 850px; 
+    margin-top: auto;
+    margin-left: 5px;
+    margin-bottom: 50px; 
+    padding: 5px 0;
+  }
+.footer {
+    width: 100%;
+    height: 40px;
+    background: #111;
+    position: fixed; left: 0; bottom: 0;
+    z-index: -100;
+  }
+  .footer p{
+    text-align: left;
+    border: auto;
+    color: #a6a5a5;
+    font-size: 1em;
+    font-weight: 300;
+  }

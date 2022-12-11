@@ -1,1 +1,23 @@
-<p>home works!</p>
+<h1>Ungular Employee Table</h1>
+       <table *ngIf="equipments$ | async as equipments">
+         <thead>
+          <tr>
+             <th>Id</th>
+             <th>Equipment Type</th>
+             <th>Equipment Name</th>
+             <th>Employee Name</th>
+             <th>Position</th>
+             <th>Email</th>
+           </tr>
+         </thead>
+         <tbody> 
+                  <tr *ngFor="let equipment of equipments">
+                    <td>{{equipment.id | number}}</td>
+                    <td></td>
+                    <td>{{equipment.name}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+              </tbody>
+           </table>
