@@ -1,5 +1,5 @@
 <h1>Ungular Employee Table</h1>
-       <table *ngIf="equipments$ | async as equipments">
+       <table *ngIf="equipments">
          <thead>
           <tr>
              <th>Id</th>
@@ -12,12 +12,12 @@
          </thead>
          <tbody> 
                   <tr *ngFor="let equipment of equipments">
-                    <td>{{equipment.id | number}}</td>
-                    <td></td>
+                    <td>{{equipment.id}}</td>
+                    <td>{{equipment.type}}</td>
                     <td>{{equipment.name}}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{equipment.employee.name}}</td>
+                    <td>{{equipment.employee.committe}}</td>
+                    <td>{{equipment.employee.email}}</td>
                   </tr>
               </tbody>
            </table>

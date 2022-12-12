@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Equipment } from '../models/equipment';
 @Injectable({
@@ -10,7 +11,7 @@ import { Equipment } from '../models/equipment';
   
     constructor(private http: HttpClient) { }
   
-    getData(){
-      return this.http.get<Equipment[]>(environment.apiUrl+this.eventsPath);
+    getData(): Observable <Equipment[]>{
+      return this.http.get<Equipment[]>(`${environment.apiUrl}${this.eventsPath}?populate=%2A`);
     }
   }
