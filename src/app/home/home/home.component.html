@@ -12,12 +12,12 @@
          </thead>
          <tbody> 
                   <tr *ngFor="let equipment of equipments">
-                    <td>{{equipment.id}}</td>
+                    <td>{{equipment.id | number}}</td>
                     <td>{{equipment.type}}</td>
-                    <td>{{equipment.name}}</td>
-                    <td>{{equipment.employee.name}}</td>
-                    <td>{{equipment.employee.committe}}</td>
-                    <td>{{equipment.employee.email}}</td>
+                    <td>{{equipment.name }}</td>
+                    <td>{{equipment.employee.name | titlecase}}</td>
+                    <td>{{equipment.employee.committe | titlecase}}</td>
+                    <td>{{equipment.employee.email | titlecase}}</td>
                   </tr>
               </tbody>
            </table>

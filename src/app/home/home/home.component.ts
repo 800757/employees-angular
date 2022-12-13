@@ -9,16 +9,17 @@ import { EquipmentDataService } from 'src/app/core/services/equipment-data.servi
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  equipments$ = this.eventService.getData();
     equipments: Array<Equipment> = [] as any;
     subscriptions: Array<Subscription> = [] as any;
-    constructor(private eventService: EquipmentDataService) { }
+    
+	constructor(private readonly equipmentService: EquipmentDataService) { }
   
     ngOnInit(): void {
+      
       this.subscriptions.push(
-        this.eventService.getData().subscribe(data => {
-        this.equipments = data;
-        console.log(data)
+        this.equipmentService.getData().subscribe(eq => {
+        this.equipments = eq.data;
+		console.log(this.equipments)
       },
           )
       );
